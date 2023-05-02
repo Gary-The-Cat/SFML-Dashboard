@@ -1,0 +1,13 @@
+{
+  "Enemies": [
+    {
+      "EnemyType": "DynamicBoulder",
+      "DefaultOverrides": {
+        "Position": {
+          "X": 1500.0,
+          "Y": 1300.0
+        }
+      }
+    }
+  ]
+}

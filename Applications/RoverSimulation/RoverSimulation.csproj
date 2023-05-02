@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Ninject" Version="3.3.4" />
+    <PackageReference Include="SFML.Net" Version="2.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Shared">
+      <HintPath>..\..\Shared\bin\Debug\netcoreapp3.1\Shared.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\Battery.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Battery_Depleted.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Gold.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Gold_Depleted.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\MazeSolver.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Rover.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\RoverIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy /E /Y /I  &quot;$(TargetDir)*&quot; &quot;$(ProjectDir)..\..\Dashboard\$(OutDir)\Applications&quot;&#xD;&#xA;xcopy /E /Y /I &quot;$(TargetDir)Resources&quot; &quot;$(ProjectDir)..\..\Dashboard\$(OutDir)\Resources&quot;" />
+  </Target>
+  
+</Project>

@@ -1,0 +1,69 @@
+{
+  "EnemyType": 2,
+  "Components": {
+    "PositionComponent": {
+      "Position": {
+        "X": 700.0,
+        "Y": 1000.0
+      },
+      "OffsetPosition": {
+        "X": 0.0,
+        "Y": 0.0
+      }
+    },
+    "SpriteComponent": {
+      "SpriteFile": "Resources/Asteroid.png"
+    },
+    "CollisionComponent": {
+      "Body": {
+        "Radius": 61.2,
+        "Center": {
+          "X": 776.5,
+          "Y": 1077.0
+        }
+      },
+      "Collision": null,
+      "IsColliding": false,
+      "CollisionLayer": 2,
+      "CollidesWithLayers": 9
+    },
+    "ContinuousFiringComponent": {},
+    "ActivationComponent": {
+      "IsActive": false
+    },
+    "PathFollowerComponent": {
+      "Duration": 4.0,
+      "CurrentTime": 0.0,
+      "AttackPattern": 1
+    },
+    "ProjectileComponent": {
+      "PendingProjectile": false,
+      "ParentOffsetIndex": 0,
+      "RemainingCooldownTime": 0.0,
+      "ProjectileLevel": 0,
+      "Projectiles": [
+        {
+          "TexturePath": "Resources/Asteroid.png",
+          "CooldownTime": 0.2,
+          "InitialUnitVelocity": {
+            "X": -1.0,
+            "Y": 0.0
+          },
+          "ParentOffsets": [
+            {
+              "X": -100.0,
+              "Y": 50.0
+            }
+          ]
+        }
+      ]
+    },
+    "PositionActivationComponent": {},
+    "DeathComponent": {
+      "RequiresRemoval": false
+    },
+    "ValueDropComponent": {
+      "Value": 300.0
+    }
+  }
+}

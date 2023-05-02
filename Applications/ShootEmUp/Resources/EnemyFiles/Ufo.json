@@ -1,0 +1,48 @@
+{
+  "EnemyType": 1,
+  "Components": {
+    "PositionComponent": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "OffsetPosition": {
+        "X": 0.0,
+        "Y": 0.0
+      }
+    },
+    "MovementComponent": {
+      "RotationalVelocity": 0.0,
+      "Velocity": {
+        "X": -400.0,
+        "Y": 0.0
+      }
+    },
+    "SpriteComponent": {
+      "SpriteFile": "Resources/Ufo.png"
+    },
+    "CollisionComponent": {
+      "Body": {
+        "Radius": 51.2,
+        "Center": {
+          "X": 64.0,
+          "Y": 64.0
+        }
+      },
+      "Collision": null,
+      "IsColliding": false,
+      "CollisionLayer": 2,
+      "CollidesWithLayers": 9
+    },
+    "ActivationComponent": {
+      "IsActive": false
+    },
+    "PositionActivationComponent": {},
+    "DeathComponent": {
+      "RequiresRemoval": false
+    },
+    "ValueDropComponent": {
+      "Value": 300.0
+    }
+  }
+}

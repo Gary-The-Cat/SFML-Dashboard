@@ -1,0 +1,41 @@
+{
+  "EnemyType": 0,
+  "Components": {
+    "PositionComponent": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0
+      }
+    },
+    "MovementComponent": {
+      "Velocity": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "RotationalVelocity": 0.0
+    },
+    "SpriteComponent": {
+      "SpriteFile": "Resources/Asteroid.png"
+    },
+    "DeathComponent": {
+      "RequiresDisposal": false
+    },
+    "ValueDropComponent": {
+      "Value": 200.0
+    },
+    "CollisionComponent": {
+      "Body": {
+        "Radius": 20,
+        "Center": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "Collision": null,
+      "IsColliding": false,
+      "CollisionLayer": 2,
+      "CollidesWithLayers": 9
+    }
+  }
+}
+
